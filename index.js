@@ -1,11 +1,10 @@
-const express = require('express');
-const app = express();
-const port = 8080;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
-
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
-});
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
